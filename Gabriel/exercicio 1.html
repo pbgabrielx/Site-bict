@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<title>Calculadora Gabriel</title>
+<meta charset="UTF-8">
+  <style type="text/css">
+  body{
+	color:red;
+  
+  
+  }
+    h1 {
+	size: 7;
+	color: blue;
+		}
+  </style>
+</head>
+<body>
+ <font face= "Garamond">
+<script type="text/javascript">
+    
+		function valV1(){
+			var erro = false;
+			if(v1.value.trim()=== ""){ erro = true; }
+			else{
+					if((isNaN(v1.value) === true)){erro = true;}
+					}
+			if(erro === true){
+					v1.style.background = "red";
+					alert("Insira um número em valor 1")
+					}else{	 v1.style.background = "white";}
+					return(!erro);
+}
+
+				function valV2(){
+			var erro = false;
+			if(v2.value.trim()=== ""){ erro = true; }
+			else{
+					if((isNaN(v2.value) === true)){erro = true;}
+					}
+			if(erro === true){
+					v2.style.background = "red";
+					alert("Insira um número em valor 2")
+					}else{	 v2.style.background = "white";}
+					return(!erro);
+}
+			
+	function somar() {
+        res.value = parseInt(v1.value) + parseInt(v2.value);}
+    function subtrair(){
+		res.value = parseInt(v1.value) - parseInt(v2.value);}
+	function multi(){
+		res.value = parseInt(v1.value) * parseInt(v2.value);}
+	function div(){
+		if(v2.value!=0){res.value = parseInt(v1.value) / parseInt(v2.value);}
+		else{res.value=("Não existe divisão por 0");}}
+				
+</script>
+<h1>Calculadora</h1>
+Valor 1: <input type="text" id="v1" value="0"><br>
+Valor 2: <input type="text" id="v2" value="0"><br><br>
+<input type="button" value="Somar" onclick="somar(), valV1(), valV2()">
+<input type="button" value="Subtrair" onclick="subtrair(), valV1(), valV2()">
+<input type="button" value="Multiplicar" onclick="multi(), valV1(), valV2()">
+<input type="button" value="Dividir" onclick="div(), valV1(), valV2()"><br><br>
+Resultado: <input type="text" id="res" value="0" readonly>
+
+</font>
+</body>
+</html>
